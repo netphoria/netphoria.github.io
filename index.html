@@ -8,16 +8,16 @@
     <style>
         html,
         body {
-            width: 1366px;
-            height: 671px;
-            margin: 0;
-            padding: 0;
+            height: 100%;
         }
 
         body {
-            background-color: #161616;
+            background-color: #36393f;
             color: #fff;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
         }
 
         header {
@@ -25,90 +25,9 @@
             padding: 20px;
         }
 
-        header img {
-            height: 40px;
-            vertical-align: middle;
-        }
-
-        nav {
-            display: inline-block;
-            margin-left: 20px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        section {
-            text-align: center;
-            padding: 50px 0;
-        }
-
-        h1 {
-            font-size: 75px;
-            font-weight: bold;
-            margin: 0;
-        }
-
-        footer {
-            background-color: #202225;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer input[type="text"],
-        footer textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #36393f;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-        }
-
-        footer textarea {
-            height: 100px;
-        }
-
-        footer input[type="text"]::placeholder,
-        footer textarea::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        footer button[type="submit"] {
-            padding: 10px 20px;
-            background-color: #7289da;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        footer button[type="submit"]:hover {
-            background-color: #677bc4;
-        }
+        /* Rest of your CSS styles */
 
         /* Media Queries */
-        @media (max-width: 768px) {
-            html,
-            body {
-                width: 100%;
-                height: 100%;
-            }
-        }
     </style>
 </head>
 
@@ -119,12 +38,12 @@
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#linkthree">Link Three</a></li>
+                <li><a href="#linkthree" id="whoami">Who am I?</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
+    <section id="content">
         <h1>Stop Fiction, Start Action</h1>
     </section>
 
@@ -134,6 +53,17 @@
             <button type="submit">Send</button>
         </form>
     </footer>
+
+    <script>
+        const whoamiLink = document.getElementById('whoami');
+        const contentSection = document.getElementById('content');
+        const defaultContent = contentSection.innerHTML;
+
+        whoamiLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            contentSection.innerHTML = "Your custom text goes here";
+        });
+    </script>
 </body>
 
 </html>
