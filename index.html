@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <style>
+        html,
+        body {
+            height: 100%;
+        }
+
         body {
             background-color: #36393f;
             color: #fff;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            min-height: 100vh;
         }
 
         header {
@@ -110,12 +116,12 @@
 
 <body>
     <header>
-        <img src="https://cdn.discordapp.com/attachments/1107492231960600587/1116219578792550473/Netphoria_NPH_logo_png.png" alt="Logo">
+        <img src="logo.png" alt="Logo">
         <nav>
             <ul>
-                <li><a href="#whoami">Whoami</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#socials">Socials</a></li>
+                <li><a href="#linkthree">Link Three</a></li>
             </ul>
         </nav>
     </header>
@@ -126,7 +132,7 @@
 
     <footer>
         <form>
-            <input type="text" placeholder="Enter your message">
+            <input type="text" placeholder="Enter your email or message">
             <button type="submit">Send</button>
         </form>
     </footer>
