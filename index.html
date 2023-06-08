@@ -7,20 +7,20 @@
     <title>My Website</title>
     <style>
         body {
-            background-color: rgb(16, 16, 16);
+            background-color: #36393f;
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #333;
+            background-color: #202225;
             padding: 20px;
         }
 
         header img {
-            height: 50px;
+            height: 40px;
             vertical-align: middle;
         }
 
@@ -45,29 +45,68 @@
             text-decoration: none;
         }
 
+        section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 75px;
+            font-weight: bold;
+            margin: 0;
+        }
+
         footer {
-            background-color: #333;
+            background-color: #202225;
             padding: 20px;
             text-align: center;
         }
 
-        footer input[type="text"] {
-            width: 300px;
+        footer input[type="text"],
+        footer textarea {
+            width: 100%;
             padding: 10px;
             margin-bottom: 10px;
+            background-color: #36393f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
         }
 
         footer textarea {
-            width: 300px;
             height: 100px;
-            padding: 10px;
+        }
+
+        footer input[type="text"]::placeholder,
+        footer textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        footer button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #7289da;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer button[type="submit"]:hover {
+            background-color: #677bc4;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 50px;
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="https://cdn.discordapp.com/attachments/1107492231960600587/1116219578792550473/Netphoria_NPH_logo_png.png" alt="Logo">
+        <img src="logo.png" alt="Logo">
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
@@ -77,21 +116,16 @@
         </nav>
     </header>
 
-    <section id="main">
-        <h1 style="font-size: 150px; font-family: Montserrat, sans-serif; font-weight: bold;">Stop Fiction, Start Action</h1>
+    <section>
+        <h1>Stop Fiction, Start Action</h1>
     </section>
 
     <footer>
         <form>
-            <input type="text" placeholder="Enter your email">
-            <textarea placeholder="Enter your message"></textarea>
+            <input type="text" placeholder="Enter your email or message">
             <button type="submit">Send</button>
         </form>
     </footer>
-
-    <script>
-        // JavaScript code for form submission or other functionality can be added here
-    </script>
 </body>
 
 </html>
