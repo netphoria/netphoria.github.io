@@ -19,12 +19,14 @@
       overflow: hidden;
     }
     
-    .video-container img {
+    .video-container video {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
       height: auto;
       z-index: -1;
     }
@@ -94,7 +96,9 @@
 </head>
 <body>
   <div class="video-container">
-    <img src="file:///C:/Users/WIN-20/Downloads/ONcY.gif" alt="Background GIF">
+    <video autoplay loop muted>
+      <source src="file:///C:/Users/WIN-20/Downloads/pexels-luis-quintero-4990246-1920x1080-30fps.mp4" type="video/mp4">
+    </video>
     <div class="overlay"></div>
     
     <div class="container">
