@@ -1,22 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Image Example</title>
+  <title>Static and Responsive Website</title>
   <style>
-    html, body {
+    /* CSS styles go here */
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
+      background-image: url('https://cdn.discordapp.com/attachments/1107492231960600587/1116208166858924072/4905678_2_1.png');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
     }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    header {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <img src="https://cdn.discordapp.com/attachments/1107492231960600587/1116208166858924072/4905678_2_1.png" alt="Image Description">
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+  <main>
+    <h2>About Me</h2>
+    <p>This is a static and responsive website with an image background.</p>
+  </main>
+  <footer>
+    &copy; 2023 My Website. All rights reserved.
+  </footer>
 </body>
 </html>
