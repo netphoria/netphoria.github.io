@@ -4,66 +4,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Responsive Website</title>
     <style>
-        html,
-        body {
-            height: 100%;
+        html, body {
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            background-color: #36393f;
+            font-family: Arial, sans-serif;
+            background-color: rgb(16, 16, 16);
             color: #fff;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
         }
 
         header {
-            background-color: #202225;
+            background-color: #333;
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
             padding: 20px;
         }
 
-        /* Rest of your CSS styles */
+        #whoami-text {
+            float: left;
+            width: 50%;
+        }
+
+        #whoami-image {
+            float: left;
+            width: 50%;
+            text-align: center;
+        }
+
+        .service-box {
+            float: left;
+            width: 33%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #work-video {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+        }
 
         /* Media Queries */
+        @media (max-width: 767px) {
+            /* Styles for mobile devices */
+            header {
+                padding: 10px;
+            }
+
+            #whoami-text,
+            #whoami-image {
+                width: 100%;
+                float: none;
+            }
+
+            .service-box {
+                width: 100%;
+            }
+
+            #work-video {
+                height: 300px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            /* Styles for tablets and larger screens */
+        }
+
+        @media (min-width: 992px) {
+            /* Styles for medium-sized and larger screens */
+        }
+
+        @media (min-width: 1200px) {
+            /* Styles for large screens */
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="logo.png" alt="Logo">
+        <img src="logo.png" alt="Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#whoami">Whoami</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#linkthree" id="whoami">Who am I?</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#socials">Socials</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="content">
-        <h1>Stop Fiction, Start Action</h1>
-    </section>
+    <main>
+        <div id="whoami">
+            <div id="whoami-text">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur risus id ex semper
+                    ultricies. Suspendisse id justo eget nunc feugiat aliquam eu eu nisl. Proin porta, libero a
+                    luctus scelerisque, risus lectus dapibus nisi, nec iaculis nunc urna ut lacus. Aliquam nec
+                    scelerisque magna, vel sollicitudin enim. Curabitur hendrerit ligula nec placerat iaculis.</p>
+            </div>
+            <div id="whoami-image">
+                <img src="whoami-image.png" alt="About Me Image">
+            </div>
+        </div>
 
-    <footer>
-        <form>
-            <input type="text" placeholder="Enter your email or message">
-            <button type="submit">Send</button>
-        </form>
-    </footer>
+        <div id="services">
+            <div class="service-box">
+                <img src="service1.png" alt="Service 1">
+                <h3>Service 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-box">
+                <img src="service2.png" alt="Service 2">
+                <h3>Service 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-box">
+                <img src="service3.png" alt="Service 3">
+                <h3>Service 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
 
-    <script>
-        const whoamiLink = document.getElementById('whoami');
-        const contentSection = document.getElementById('content');
-        const defaultContent = contentSection.innerHTML;
+        <div id="work">
+            <div id="work-video">
+                <iframe src="https://player.vimeo.com/video/123456789" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
-        whoamiLink.addEventListener('click', function (event) {
-            event.preventDefault();
-            contentSection.innerHTML = "Your custom text goes here";
-        });
-    </script>
+        <div id="socials" class="social-icons">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="discord-icon.png" alt="Discord"></a>
+            <a href="#"><img src="reddit-icon.png" alt="Reddit"></a>
+        </div>
+    </main>
+
+    <!-- Rest of your website content goes here -->
+
 </body>
 
 </html>
