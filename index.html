@@ -9,12 +9,40 @@
         html, body {
             margin: 0;
             padding: 0;
+            height: 100%;
         }
 
         body {
             font-family: Arial, sans-serif;
-            background-color: rgb(16, 16, 16);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url("https://cdn.discordapp.com/attachments/1109865813558698117/1116257529148747786/black-anonim-chelovek-kapyushon-temnii-chernii-81383.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
             color: #fff;
+        }
+
+        .overlay h1 {
+            font-size: 50px;
+            font-weight: bold;
         }
 
         header {
@@ -45,47 +73,6 @@
             text-decoration: none;
         }
 
-        main {
-            padding: 20px;
-        }
-
-        #whoami-text {
-            float: left;
-            width: 50%;
-        }
-
-        #whoami-image {
-            float: left;
-            width: 50%;
-            text-align: center;
-        }
-
-        .service-box {
-            float: left;
-            width: 33%;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        #work-video {
-            width: 100%;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .social-icons {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            margin: 0 5px;
-        }
-
         /* Media Queries */
         @media (max-width: 767px) {
             /* Styles for mobile devices */
@@ -93,18 +80,8 @@
                 padding: 10px;
             }
 
-            #whoami-text,
-            #whoami-image {
-                width: 100%;
-                float: none;
-            }
-
-            .service-box {
-                width: 100%;
-            }
-
-            #work-video {
-                height: 300px;
+            .overlay h1 {
+                font-size: 30px;
             }
         }
 
@@ -123,64 +100,22 @@
 </head>
 
 <body>
+    <div class="background-image"></div>
+    <div class="overlay">
+        <h1>Stop Fiction, Start Action</h1>
+    </div>
+
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
+        <img src="https://cdn.discordapp.com/attachments/1107492231960600587/1116219578792550473/Netphoria_NPH_logo_png.png" alt="Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#whoami">Whoami</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#work">Work</a></li>
-                <li><a href="#socials">Socials</a></li>
+                <li><a href="#social">Social</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <div id="whoami">
-            <div id="whoami-text">
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur risus id ex semper
-                    ultricies. Suspendisse id justo eget nunc feugiat aliquam eu eu nisl. Proin porta, libero a
-                    luctus scelerisque, risus lectus dapibus nisi, nec iaculis nunc urna ut lacus. Aliquam nec
-                    scelerisque magna, vel sollicitudin enim. Curabitur hendrerit ligula nec placerat iaculis.</p>
-            </div>
-            <div id="whoami-image">
-                <img src="whoami-image.png" alt="About Me Image">
-            </div>
-        </div>
-
-        <div id="services">
-            <div class="service-box">
-                <img src="service1.png" alt="Service 1">
-                <h3>Service 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="service-box">
-                <img src="service2.png" alt="Service 2">
-                <h3>Service 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="service-box">
-                <img src="service3.png" alt="Service 3">
-                <h3>Service 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-
-        <div id="work">
-            <div id="work-video">
-                <iframe src="https://player.vimeo.com/video/123456789" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div id="socials" class="social-icons">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="discord-icon.png" alt="Discord"></a>
-            <a href="#"><img src="reddit-icon.png" alt="Reddit"></a>
-        </div>
-    </main>
 
     <!-- Rest of your website content goes here -->
 
