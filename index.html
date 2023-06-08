@@ -1,124 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Website</title>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
 
-        body {
-            font-family: Arial, sans-serif;
-            position: relative;
-            overflow: hidden;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
 
-        .background-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-image: url("https://cdn.discordapp.com/attachments/1109865813558698117/1116257529148747786/black-anonim-chelovek-kapyushon-temnii-chernii-81383.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
+      .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url("https://cdn.discordapp.com/attachments/1109865813558698117/1116257529148747786/black-anonim-chelovek-kapyushon-temnii-chernii-81383.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
 
-        .overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #fff;
+      .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+      }
+
+      .overlay h1 {
+        font-size: 50px;
+        font-weight: bold;
+      }
+
+      header {
+        background-color: #333;
+        padding: 10px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        margin-right: 10px;
+        height: 40px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .social-media {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .social-media img {
+        display: inline-block;
+        margin-right: 10px;
+        height: 30px;
+      }
+
+      /* Media Queries */
+      @media (max-width: 767px) {
+
+        /* Styles for mobile devices */
+        header {
+          padding: 10px;
         }
 
         .overlay h1 {
-            font-size: 50px;
-            font-weight: bold;
+          font-size: 30px;
         }
+      }
 
-        header {
-            background-color: #333;
-            padding: 20px;
-            text-align: left;
-            display: flex;
-            align-items: center;
-        }
+      @media (min-width: 768px) {
+        /* Styles for tablets and larger screens */
+      }
 
-        .logo {
-            margin-right: 10px;
-        }
+      @media (min-width: 992px) {
+        /* Styles for medium-sized and larger screens */
+      }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav li {
-            display: inline-block;
-            margin-right: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* Media Queries */
-        @media (max-width: 767px) {
-            /* Styles for mobile devices */
-            header {
-                padding: 10px;
-            }
-
-            .overlay h1 {
-                font-size: 30px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            /* Styles for tablets and larger screens */
-        }
-
-        @media (min-width: 992px) {
-            /* Styles for medium-sized and larger screens */
-        }
-
-        @media (min-width: 1200px) {
-            /* Styles for large screens */
-        }
+      @media (min-width: 1200px) {
+        /* Styles for large screens */
+      }
     </style>
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="background-image"></div>
     <div class="overlay">
-        <h1>Stop Fiction, Start Action</h1>
+      <h1>Stop Fiction, Start Action</h1>
     </div>
-
     <header>
-        <img src="logo.png" alt="Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#whoami">Whoami</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#socials">Socials</a></li>
-            </ul>
-        </nav>
+      <img src="https://cdn.discordapp.com/attachments/1107492231960600587/1116219578792550473/Netphoria_NPH_logo_png.png" alt="Logo" class="logo">
+      <nav>
+        <ul>
+          <li>
+            <a href="#whoami">Whoami</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#work">Work</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-
     <!-- Rest of your website content goes here -->
-
-</body>
-
+    <div class="social-media">
+      <a href="https://www.twitch.tv/netph0ria" target="_blank">
+        <img src="https://cdn.discordapp.com/attachments/1109865813558698117/1116272816657018910/twitch.png" alt="Twitch">
+      </a>
+      <a href="https://www.instagram.com/netph0ria/" target="_blank">
+        <img src="https://cdn.discordapp.com/attachments/1109865813558698117/1116272816082403335/icons8-instagram-24.png" alt="Instagram">
+      </a>
+      <a href="https://www.youtube.com/@netphoria" target="_blank">
+        <img src="https://cdn.discordapp.com/attachments/1109865813558698117/1116272816417935490/icons8-youtube-logo-24.png" alt="YouTube">
+      </a>
+      <a href="https://twitter.com/netph0ria" target="_blank">
+        <img src="https://cdn.discordapp.com/attachments/1109865813558698117/1116274405258051644/icons8-twitter-24.png" alt="Twitter">
+      </a>
+      <a href="https://soundcloud.com/netphoria" target="_blank">
+        <img src="https://cdn.discordapp.com/attachments/1109865813558698117/1116274131890098226/soundcloud.png" alt="SoundCloud">
+      </a>
+      <a href="https://www.reddit.com/user/netphoria" target="_blank">
+        <img src="https://cdn.discordapp.com/attachments/1109865813558698117/1116272815142875146/icons8-reddit-24.png" alt="Reddit">
+      </a>
+      <a href="/connect">
+        <img src="email.png" alt="Email">
+      </a>
+    </div>
+  </body>
 </html>
